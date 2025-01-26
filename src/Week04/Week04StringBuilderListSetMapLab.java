@@ -41,7 +41,7 @@ public class Week04StringBuilderListSetMapLab {
 			strings.add("Hello");
 			strings.add("Sam");
 			strings.add("Joel");
-			strings.add("Assignment");
+			strings.add("Justin");
 			System.out.println("2." + strings);
 		// 3. Write and test a method that takes a list of strings 
 		//			and returns the shortest string
@@ -156,9 +156,28 @@ public class Week04StringBuilderListSetMapLab {
 		//			and returns a Map<Character, Integer> containing a count of 
 		//			all the strings that start with a given character
 		
-		
+		System.out.println("15. ount of all the strings that start with a given character");
+		Map<Character, Integer> returnMap = countOfSringBegunWithSameLetter(strings);
+		for (Character  chart : returnMap.keySet()) {
+			System.out.println(chart+": "+ returnMap.get(chart));
+		}
 
 	}
+
+	private static Map<Character, Integer> countOfSringBegunWithSameLetter(List<String> list) {
+		Map<Character, Integer> result = new HashMap<Character, Integer>();
+			for (String string : list) {
+				char ch =string.charAt(0);
+				if (result.get(ch)== null) {
+					result.put(ch, 1);
+				} else {
+					result.put(ch,result.get(ch)+1);
+					}
+				}
+			return result;
+			}
+		
+	
 
 	private static String meaningOfTheWordSearch(Map<String, String> map, String str) {
 		for (String strmap :map.keySet()) {
