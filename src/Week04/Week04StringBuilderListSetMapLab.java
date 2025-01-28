@@ -161,11 +161,11 @@ public class Week04StringBuilderListSetMapLab {
 		for (Character  chart : returnMap.keySet()) {
 			System.out.println(chart+": "+ returnMap.get(chart));
 		}
-
+		
 	}
 
 	private static Map<Character, Integer> countOfSringBegunWithSameLetter(List<String> list) {
-		Map<Character, Integer> result = new HashMap<Character, Integer>();
+		Map<Character, Integer> result = new HashMap<>();
 			for (String string : list) {
 				char ch =string.charAt(0);
 				if (result.get(ch)== null) {
